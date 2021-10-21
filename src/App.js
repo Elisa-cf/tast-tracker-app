@@ -29,11 +29,21 @@ const App = () => {
     }
 ])
 
+// adding task 
+
+const addTask = (task) => {
+const id = Math.floor(Math.random() * 1000) + 1 //create a new and random ID//
+console.log(id)
+const newTask = {id, ...task} //we want the id and all the things that the user will write//
+setTasks([...tasks, newTask]) //we set the tasks already there and the new tasks/
+}
+
+
 
 //delete task
 
 const deleteTask = (id) => {
- setTasks(tasks.filter((task) => task.id !== id !== id))
+ setTasks(tasks.filter((task) => task.id !== id))
 }
 
 
@@ -47,7 +57,7 @@ setTasks(tasks.map((task) => task.id === id ? { ...task, reminder: !task.reminde
  return (
     <div className="container">
     <Header /> 
-    <AddTask />
+    <AddTask onAdd={addTask}/>
     {tasks.length > 0 ? <Tasks tasks ={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : "No more tasks"}
     </div>
   )
