@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+#Task Tracker - REACT app
+
+A task tracker build with REACT to get used to components, props, useState Hook and more :)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
