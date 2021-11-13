@@ -1,4 +1,4 @@
-# Task Tracker - REACT app
+# Task Tracker - React app
 
 >A task tracker build with REACT to get used to:
 >
