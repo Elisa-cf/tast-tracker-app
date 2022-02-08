@@ -11,7 +11,7 @@ const App = () => {
   const [refetchFlag, setRefetchFlag] = useState(false)
 
   const client = axios.create({
-    baseURL: "http://localhost:8000/api/tasks"
+    baseURL: "/api/tasks"
   });
 
   const getTasks = useCallback(async () => {

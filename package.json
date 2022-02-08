@@ -12,7 +12,7 @@
     "test": "echo \"Errorg: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=FALSE npm install --prefix client && npm run build --prefix client"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Elisa-cf/tast-tracker-app.git"
   },
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Elisa-cf/tast-tracker-app#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.2.1"
   },

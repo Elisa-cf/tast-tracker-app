@@ -6,7 +6,7 @@ const Task = ({task, onToggle, refetchTasks}) => {
     console.log(task);
 
     const client = axios.create({
-        baseURL: "http://localhost:8000/api"
+        baseURL: "/api"
     });
     async function deleteTasks(id) {
         try {
