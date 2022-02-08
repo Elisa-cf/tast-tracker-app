@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import api from "./axios/axios";
+import api from "../axios/axios";
 
 const AddTask = ({tasks, setTasks, refetchFlag, setRefetchFlag}) => {
 const[newText,setNewText] = useState("")
