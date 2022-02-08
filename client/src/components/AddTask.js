@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import axios from "axios";
+import api from "./axios/axios";
 
 const AddTask = ({tasks, setTasks, refetchFlag, setRefetchFlag}) => {
 const[newText,setNewText] = useState("")
@@ -14,7 +14,7 @@ const[newReminder,setNewReminder] = useState(false)
             { text: newText, deadline: newDeadLine, reminder: newReminder },
         ]);
 
-        axios
+        api
             .post("/tasks", {
                 text: newText, deadline: newDeadLine, reminder: newReminder
             })
