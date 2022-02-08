@@ -1,19 +1,24 @@
-# Task Tracker - React app
+# Task Tracker - MERN App
 
->A task tracker build with REACT to get used to:
+Live site: https://guarded-basin-92534.herokuapp.com/
+
+>A task tracker build with:
 >
->- components
->- props
->- useState Hook
->- and more :)
-  
+>- MongoDB
+>- React
+>- Express.js
+>- Node.js
 
+## Deployment method:
+
+- Heroku
+  
 ## Installation
 
 To install the project locally:
 
 - Clone the repository
 - npm install
-- npm start
+- npm run dev
 
   
