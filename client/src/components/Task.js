@@ -1,16 +1,10 @@
 import { FaTimes } from 'react-icons/fa'
-import axios from "axios";
+import api from '../axios/axios';
 
 const Task = ({task, onToggle, refetchTasks}) => {
-
-    console.log(task);
-
-    const client = axios.create({
-        baseURL: "/api"
-    });
     async function deleteTasks(id) {
         try {
-            await client.delete(`/tasks/${id}`);
+            await api.delete(`/tasks/${id}`);
             await refetchTasks();
         } catch (error) {
             console.error(error);

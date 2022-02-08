@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
-import axios from "axios";
+import api from "./axios/axios";
 
 
 const App = () => { 
@@ -10,18 +10,16 @@ const App = () => {
   const [tasks, setTasks] = useState([])
   const [refetchFlag, setRefetchFlag] = useState(false)
 
-  const client = axios.create({
-    baseURL: "/api/tasks"
-  });
+  
 
   const getTasks = useCallback(async () => {
     try {
-      const response = await client.get("/");
+      const response = await api.get("/tasks");
       setTasks(response.data);
     } catch (error) {
       console.error(error);
     }
-  }, [client])
+  }, [])
 
   // const getTasks = async () => {
 
