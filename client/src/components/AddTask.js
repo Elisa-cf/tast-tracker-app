@@ -15,7 +15,7 @@ const[newReminder,setNewReminder] = useState(false)
         ]);
 
         axios
-            .post("http://localhost:8000/api/tasks", {
+            .post("/tasks", {
                 text: newText, deadline: newDeadLine, reminder: newReminder
             })
             .then(function (response) {
